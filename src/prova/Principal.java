@@ -45,22 +45,27 @@ public class Principal {
 			}
 		}while(op != 0);
 	}
-	public static void cadastroCliente(List<Aluno> list, Aluno aluno) {
-		if(!(list.contains(aluno.getMatricula()))) 
+	public static boolean cadastroCliente(List<Aluno> list, Aluno aluno) {
+		if(!(list.contains(aluno))) {
 			list.add(aluno);
+			return true;
+		}else {
+			return false;
+		}
 			
 	}
 	public static void ListarAlunos(List<Aluno> list) {
 		for(Aluno a : list)
 			System.out.println(a.toString());
 	}
-	public static void RemoverAluno(List<Aluno> list, String mat) {
+	public static boolean RemoverAluno(List<Aluno> list, String mat) {
 		for(Aluno a : list) {
 			if(a.getMatricula().equals(mat)) {
 				list.remove(a);
+				return true;
 			}
 		}
-		
+		return false;
 	}
 
 }
