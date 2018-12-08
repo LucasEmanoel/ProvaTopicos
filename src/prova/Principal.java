@@ -33,7 +33,7 @@ public class Principal {
 
 				break;
 			case 2:
-				
+				ListarAlunos(alunos);
 				break;
 			case 3:
 				break;
@@ -46,4 +46,9 @@ public class Principal {
 			list.add(aluno);
 			
 	}
+	public static void ListarAlunos(List<Aluno> list) {
+		for(Aluno a : list)
+			System.out.println(a.toString());
+	}
+
 }

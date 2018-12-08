@@ -18,7 +18,12 @@ public class Aluno {
 	}
 	public String getMatricula() {
 		return matricula;
+	}
+	@Override
+	public String toString() {
+		return "Aluno [Nome=" + nome + ", Matricula=" + matricula + "]";
 	}	
+	
 	
 	
 
