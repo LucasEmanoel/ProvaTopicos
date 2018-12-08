@@ -36,6 +36,10 @@ public class Principal {
 				ListarAlunos(alunos);
 				break;
 			case 3:
+				System.out.println("Digite a matricula do Aluno");
+				matricula = sc.next();
+				
+				RemoverAluno(alunos, matricula);
 				break;
 			default:
 			}
@@ -49,6 +53,14 @@ public class Principal {
 	public static void ListarAlunos(List<Aluno> list) {
 		for(Aluno a : list)
 			System.out.println(a.toString());
+	}
+	public static void RemoverAluno(List<Aluno> list, String mat) {
+		for(Aluno a : list) {
+			if(a.getMatricula().equals(mat)) {
+				list.remove(a);
+			}
+		}
+		
 	}
 
 }
